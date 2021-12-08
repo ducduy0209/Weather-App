@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #43affc;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0 10px;
+}
+
+.container {
+    min-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container.active .box-input {
+    display: none;
+}
+
+.container.active .box-weather {
+    display: flex;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #43affc;
+    padding: 14px 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+}
+
+header.show i {
+    display: block !important;
+}
+
+header i {
+    margin-right: 12px;
+    padding: 0 6px;
+    cursor: pointer;
+    display: none !important;
+}
+
+.box-input {
+    margin: 20px 26px 30px;
+}
+
+.info-text {
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.info-text.error {
+    color: #721c24;
+    display: block;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.info-text.pending {
+    color: #0c5460;
+    display: block;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+#input {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline-color: #43affc;
+}
+
+#input::-webkit-input-placeholder {
+    color: rgb(165, 156, 156);
+    font-size: 17px;
+}
+
+#input::-moz-placeholder {
+    color: rgb(165, 156, 156);
+    font-size: 17px;
+}
+
+#input:-ms-input-placeholder {
+    color: rgb(165, 156, 156);
+    font-size: 17px;
+}
+
+#input::-ms-input-placeholder {
+    color: rgb(165, 156, 156);
+    font-size: 17px;
+}
+
+#input::placeholder {
+    color: rgb(165, 156, 156);
+    font-size: 17px;
+}
+
+.separator {
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator::before {
+    content: "or";
+    display: block;
+    padding: 0 16px;
+    background-color: #fff;
+    color: #b3b3b3;
+    font-size: 17px;
+}
+
+.input-content button {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #43affc;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.input-content button:hover {
+    background-color: #2da5fc;
+}
+
+
+/* section weather box */
+
+.box-weather {
+    display: none;
+    margin: 30px 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    max-width: 126px;
+}
+
+.box-weather>.temp {
+    font-size: 72px;
+    font-weight: 500;
+    display: flex;
+    margin-top: 8px;
+}
+
+.numb-temp {
+    font-weight: 600;
+}
+
+.box-weather>.temp .deg {
+    font-size: 34px;
+    font-weight: 600;
+    display: block;
+    margin: 8px 5px 0 0;
+}
+
+.weather {
+    font-size: 18px;
+    margin: 0 12px 20px;
+}
+
+.location {
+    margin: 0 16px 36px;
+}
+
+.location i {
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.location span {
+    font-size: 17px;
+}
+
+.bottom-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.column:first-child {
+    border-right: 1px solid #ccc;
+}
+
+.column i {
+    font-size: 33px;
+    color: #43affc;
+    margin-right: 8px;
+}
+
+.details .temp {
+    display: flex;
+    font-weight: 500;
+}
+
+.details .temp .deg {
+    display: block;
+    margin: -2px 1px 0;
+}
+
+.details p {
+    margin-top: -5px;
+    font-size: 13px;
+}
+
+.details:nth-child(2) span {
+    font-weight: 500;
+}
