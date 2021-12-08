@@ -14,6 +14,7 @@ body {
     background-color: #43affc;
     -webkit-tap-highlight-color: transparent;
     padding: 0 10px;
+    overflow: hidden;
 }
 
 .container {
