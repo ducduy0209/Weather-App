@@ -192,6 +192,7 @@ img {
 
 .location {
     margin: 0 16px 36px;
+    text-align: center;
 }
 
 .location i {
@@ -245,4 +246,10 @@ img {
 
 .details:nth-child(2) span {
     font-weight: 500;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        min-width: 310px;
+    }
 }
